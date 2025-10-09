@@ -110,6 +110,68 @@ nav {
     padding-left: 1.5rem;
 }
 
+/* Mobile Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow {
+    margin-left: 0.5rem;
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when dropdown is active */
+.dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    background-color: #2C2C2C;
+    margin: 0;
+    padding: 0;
+    border-left: 3px solid #556B2F;
+}
+
+/* Show dropdown when active */
+.dropdown.active .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid rgba(85, 107, 47, 0.3);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #CCCCCC;
+    text-decoration: none;
+    padding: 0.875rem 1rem 0.875rem 2rem;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, padding-left 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(85, 107, 47, 0.4);
+    padding-left: 2.5rem;
+    color: #FFFFFF;
+}
+
 /*Main Styles*/
 main {
     padding: 1.5rem 1rem;
@@ -292,6 +354,61 @@ footer {
         padding-left: 1rem;
     }
 
+    /*desktop-like dropdown*/
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .arrow {
+        margin-left: 0.25rem;
+    }
+
+    /*by default, hides dropdown on desktop*/
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        background-color: #2C2C2C;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 0 0 5px 5px;
+        border-left: 3px solid #556B2F;
+        z-index: 1000;
+        display: none;
+    }
+
+    /*Show on hover for desktop*/
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+
+    /*Show on click/active for desktop*/
+    .dropdown.active .dropdown-menu {
+        display: flex;
+    }
+
+    .dropdown-menu li {
+        border-bottom: 1px solid rgba(85, 107, 47, 0.3);
+        border-right: none;
+    }
+
+    .dropdown-menu a {
+        padding: 0.875rem 1.5rem;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        padding-left: 1.5rem;
+        background-color: #556B2F;
+    }
+
+
     /*Header adjustments*/
     .header-content .logo h1 {
         font-size: 2rem;
@@ -355,6 +472,26 @@ footer {
     .nav-links a:hover::after {
         width: 100%;
         left: 0;
+    }
+
+    .dropdown-menu {
+        min-width: 220px;
+    }
+
+    /*slide-down animation*/
+    .dropdown-menu {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown.active .dropdown-menu {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 
     /*Featured weapons - 2 column grid*/
