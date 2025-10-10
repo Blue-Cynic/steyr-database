@@ -6,92 +6,91 @@
     <meta name="description" content="Steyr Arms Database - A comprehensive catalog of military weapons developed by Steyr Arms GmbH from the late 20th century to present.">
     <title>Steyr Arms Database | A Record of Steyr's Military Weapons</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--header -->
+    <!--header-->
     <header>
-        <div class="header-content">
-            <div class="logo">
-                <h1>STEYR ARMS DATABASE</h1>
-                <p class="tagline">A Record of Steyr's Military Weapons</p>
-            </div>
+    <div class="header-content">
+        <!--logo-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/steyr-logo.png" alt="Steyr Arms Logo">
+            </a>
         </div>
-    </header>
 
-    <!--nav bar-->
-    <nav>
-    <div class="mobile-menu">
-        <button id="hamburger" aria-label="Toggle navigation menu">
-            &#9776;
-        </button>
+        <!--nav bar-->
+        <nav>
+            <div class="mobile-menu">
+                <button id="hamburger" aria-label="Toggle navigation menu">
+                    &#9776;
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                
+                <!--assault rifles-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Assault Rifles <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aug.html">Steyr AUG</a></li>
+                        <li><a href="stm-556.html">STM-556</a></li>
+                        <li><a href="g62.html">G62</a></li>
+                    </ul>
+                </li>
+                
+                <!--precision rifles-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Precision Rifles <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ssg-69.html">SSG 69</a></li>
+                        <li><a href="scout.html">Scout</a></li>
+                        <li><a href="ssg-04.html">SSG 04</a></li>
+                        <li><a href="ssg-08.html">SSG 08</a></li>
+                        <li><a href="dmr-762.html">DMR 762</a></li>
+                        <li><a href="hs-50.html">HS .50</a></li>
+                    </ul>
+                </li>
+                
+                <!--smgs-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">SMGs <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mpi-69.html">MPi 69</a></li>
+                        <li><a href="aug-para.html">AUG Para</a></li>
+                        <li><a href="tmp.html">TMP</a></li>
+                    </ul>
+                </li>
+                
+                <!--pistols-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Pistols <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gb.html">GB</a></li>
+                        <li><a href="m-series.html">M Series</a></li>
+                    </ul>
+                </li>
+                
+                <!--40mm-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">40mm <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gl-40.html">GL 40</a></li>
+                    </ul>
+                </li>
+                
+                <!--Other-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Other <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        
-        <!--assault riflesn-->
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Assault Rifles <span class="arrow">&#9662;</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="aug.html">Steyr AUG</a></li>
-                <li><a href="stm-556.html">STM-556</a></li>
-                <li><a href="g62.html">G62</a></li>
-            </ul>
-        </li>
-        
-        <!--precision rifles-->
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Precision Rifles <span class="arrow">&#9662;</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="ssg-69.html">SSG 69</a></li>
-                <li><a href="scout.html">Scout</a></li>
-                <li><a href="ssg-04.html">SSG 04</a></li>
-                <li><a href="ssg-08.html">SSG 08</a></li>
-                <li><a href="dmr-762.html">DMR 762</a></li>
-                <li><a href="hs-50.html">HS .50</a></li>
-            </ul>
-        </li>
-        
-        <!--smgs-->
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle">SMGs <span class="arrow">&#9662;</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="mpi-69.html">MPi 69</a></li>
-                <li><a href="aug-para.html">AUG Para</a></li>
-                <li><a href="tmp.html">TMP</a></li>
-            </ul>
-        </li>
-        
-        <!--pistols-->
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Pistols <span class="arrow">&#9662;</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="gb.html">GB Series</a></li>
-                <li><a href="m-series.html">M Series</a></li>
-            </ul>
-        </li>
-        
-        <!--40mm-->
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle">40mm <span class="arrow">&#9662;</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="gl-40.html">GL 40</a></li>
-            </ul>
-        </li>
-        
-        <!--Other-->
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Other <span class="arrow">&#9662;</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="history.html">History</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </li>
-    </ul>
-    </nav>
+    </header>
 
     <!--main-->
     <main>

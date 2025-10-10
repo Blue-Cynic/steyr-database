@@ -13,14 +13,14 @@ html, body, header, nav, main, footer, section, article, figure, figcaption, h1,
 
 /*Global Styles*/
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #2C2C2C;
     color: #CCCCCC;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Georgia', serif;
     font-weight: 700;
 }
 
@@ -35,34 +35,53 @@ img {
 /*Header Styles*/
 header {
     background: linear-gradient(135deg, #556B2F 0%, #3F4F24 100%);
-    padding: 1.5rem 1rem;
-    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.header-content .logo h1 {
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.tagline {
-    color: #CCCCCC;
-    font-size: 0.875rem;
-    font-style: italic;
-    margin-top: 0.5rem;
+/*Logo Styles*/
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 /*Navigation Styles*/
 nav {
-    background-color: #3F4F24;
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 
+/* Mobile Menu Button */
 .mobile-menu {
-    padding: 1rem;
-    text-align: right;
+    display: block;
 }
 
 #hamburger {
@@ -84,7 +103,15 @@ nav {
     list-style: none;
     display: none;
     flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
     background-color: #3F4F24;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 5px 5px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links.active {
@@ -95,7 +122,11 @@ nav {
     border-bottom: 1px solid #556B2F;
 }
 
-.nav-links a {
+.nav-links li:last-child {
+    border-bottom: none;
+}
+
+.nav-links > li > a {
     display: block;
     color: #FFFFFF;
     text-decoration: none;
@@ -104,8 +135,8 @@ nav {
     transition: background-color 0.3s ease, padding-left 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links > li > a:hover,
+.nav-links > li > a.active {
     background-color: #556B2F;
     padding-left: 1.5rem;
 }
@@ -328,6 +359,14 @@ footer {
 
 /*Tablet Styles (min-width: 768px)*/
 @media screen and (min-width: 768px) {
+    .header-content {
+        padding: 1rem 2rem;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
     /*Hide hamburger menu*/
     .mobile-menu {
         display: none;
@@ -337,21 +376,28 @@ footer {
     .nav-links {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        min-width: auto;
+        gap: 0.5rem;
     }
 
     .nav-links li {
         border-bottom: none;
-        border-right: 1px solid #556B2F;
-    }
-
-    .nav-links li:last-child {
         border-right: none;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links > li > a {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .nav-links > li > a:hover,
+    .nav-links > li > a.active {
         padding-left: 1rem;
+        background-color: rgba(85, 107, 47, 0.5);
+        border-radius: 5px;
     }
 
     /*desktop-like dropdown*/
@@ -388,7 +434,7 @@ footer {
         display: flex;
     }
 
-    /*Show on click/active for desktop*/
+    /* Show on click/active as well */
     .dropdown.active .dropdown-menu {
         display: flex;
     }
@@ -408,14 +454,9 @@ footer {
         background-color: #556B2F;
     }
 
-
     /*Header adjustments*/
     .header-content .logo h1 {
         font-size: 2rem;
-    }
-
-    .tagline {
-        font-size: 1rem;
     }
 
     /*Main content adjustments*/
@@ -453,25 +494,39 @@ footer {
         font-size: 2.5rem;
     }
 
-    /*Navigation hover effects*/
-    .nav-links a {
-        position: relative;
+    .logo img {
+        height: 80px;
     }
 
-    .nav-links a::after {
+    /*Navigation hover effects*/
+    .nav-links {
+        gap: 0.75rem;
+    }
+
+    .nav-links > li > a {
+        padding: 0.875rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    .nav-links > li > a {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nav-links > li > a::before {
         content: '';
         position: absolute;
         bottom: 0;
         left: 50%;
         width: 0;
-        height: 3px;
+        height: 2px;
         background-color: #FFFFFF;
         transition: width 0.3s ease, left 0.3s ease;
     }
 
-    .nav-links a:hover::after {
-        width: 100%;
-        left: 0;
+    .nav-links > li > a:hover::before {
+        width: 80%;
+        left: 10%;
     }
 
     .dropdown-menu {
@@ -537,6 +592,22 @@ footer {
     /*Featured weapons - 3 column grid*/
     .featured {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header-content {
+        max-width: 1600px;
+    }
+
+    .logo img {
+        height: 90px;
+    }
+
+    nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links > li > a {
+        padding: 1rem 1.5rem;
     }
 }
 
