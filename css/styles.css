@@ -51,11 +51,22 @@ header {
 }
 
 /*Logo Styles*/
-/* Logo Styles */
 .logo {
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-direction: row;
+}
+
+.logo h1 {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    line-height: 1.2;
 }
 
 .logo a {
@@ -66,11 +77,12 @@ header {
 .logo img {
     height: 60px;
     width: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .logo img:hover {
     transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 /*Navigation Styles*/
@@ -455,7 +467,7 @@ footer {
     }
 
     /*Header adjustments*/
-    .header-content .logo h1 {
+    .logo h1 {
         font-size: 2rem;
     }
 
@@ -490,7 +502,7 @@ footer {
 /*Desktop Styles (min-width: 1024px)*/
 @media screen and (min-width: 1024px) {
     /*Header adjustments*/
-    .header-content .logo h1 {
+    .logo h1 {
         font-size: 2.5rem;
     }
 
@@ -602,7 +614,7 @@ footer {
         height: 90px;
     }
 
-    nav-links {
+    .nav-links {
         gap: 1rem;
     }
 
