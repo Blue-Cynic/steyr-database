@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Steyr Arms Database - Submit inquiries, feedback, and requests for information about Steyr firearms.">
+    <title>Contact Us | Steyr Arms Database</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!--header-->
+    <header>
+    <div class="header-content">
+        <!--logo-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/steyr-logo.png" alt="Steyr Arms Logo">
+            </a>
+        </div>
+
+        <!--nav bar-->
+        <nav>
+            <div class="mobile-menu">
+                <button id="hamburger" aria-label="Toggle navigation menu">
+                    &#9776;
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                
+                <!--assault rifles-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Assault Rifles <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aug.html">Steyr AUG</a></li>
+                        <li><a href="stm-556.html">STM-556</a></li>
+                        <li><a href="g62.html">G62</a></li>
+                    </ul>
+                </li>
+                
+                <!--precision rifles-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Precision Rifles <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ssg-69.html">SSG 69</a></li>
+                        <li><a href="scout.html">Scout</a></li>
+                        <li><a href="ssg-04.html">SSG 04</a></li>
+                        <li><a href="ssg-08.html">SSG 08</a></li>
+                        <li><a href="dmr-762.html">DMR 762</a></li>
+                        <li><a href="hs-50.html">HS .50</a></li>
+                    </ul>
+                </li>
+                
+                <!--smgs-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">SMGs <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mpi-69.html">MPi 69</a></li>
+                        <li><a href="aug-para.html">AUG Para</a></li>
+                        <li><a href="tmp.html">TMP</a></li>
+                    </ul>
+                </li>
+                
+                <!--pistols-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Pistols <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gb.html">GB</a></li>
+                        <li><a href="m-series.html">M Series</a></li>
+                    </ul>
+                </li>
+                
+                <!--40mm-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">40mm <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gl-40.html">GL 40</a></li>
+                    </ul>
+                </li>
+                
+                <!--other-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Other <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <!--main-->
+    <main>
+        <section class="contact-intro">
+            <h2>Contact Us</h2>
+            <p>Have questions about Steyr firearms? Want to contribute information to our database? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+        </section>
+
+        <!--contact form-->
+        <section class="contact-form-section">
+            <form action="submit-form.php" method="post" class="contact-form">
+                <!--personal info-->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="fullname">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+63 912 345 6789">
+                    </div>
+                </fieldset>
+
+                <!--inquiry details-->
+                <fieldset>
+                    <legend>Inquiry Details</legend>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Select a subject --</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="information">Request Information</option>
+                            <option value="correction">Submit Correction</option>
+                            <option value="contribution">Contribute Content</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weapon-interest">Specific Firearm of Interest</label>
+                        <input type="text" id="weapon-interest" name="weapon-interest" placeholder="e.g., Steyr AUG">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Are you a: <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="visitor-type" value="enthusiast" required>
+                                Firearms Enthusiast
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="visitor-type" value="researcher">
+                                Researcher/Historian
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="visitor-type" value="student">
+                                Student
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="visitor-type" value="professional">
+                                Military/Law Enforcement
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="visitor-type" value="other">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="8" required placeholder="Enter your message here..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!--preferences-->
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Subscribe to updates about new firearms added to the database
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" value="accepted" required>
+                            I agree to the privacy policy <span class="required">*</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!--buttons-->
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Submit Inquiry</button>
+                    <button type="reset" class="btn-reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
+
+        <!--contact info-->
+        <aside class="contact-info">
+            <h3>Other Ways to Reach Us</h3>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <h4>Email</h4>
+                    <p><a href="mailto:info@steyrarmsdatabase.edu">info@steyrarmsdatabase.edu</a></p>
+                </div>
+                <div class="contact-method">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+639123456789">+63 912 345 6789</a></p>
+                </div>
+                <div class="contact-method">
+                    <h4>Location</h4>
+                    <p>Still<br>
+                    In<br>
+                    Progress</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 Steyr Arms Database by Lord Raizen Espinosa.</p>
+            </div>
+            <div class="social-media">
+                <a href="" target="_blank" aria-label="Visit our Facebook page">
+                    <img src="images/facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="" target="_blank" aria-label="Visit our Instagram page">
+                    <img src="images/instagram-icon.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <p>For inquiries: <a href="tel:+639123456789">+63 912 345 6789</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
