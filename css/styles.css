@@ -324,7 +324,7 @@ p {
 
 /*Footer Styles*/
 footer {
-    background-color: #000000;
+    background-color: #556B2F;
     color: #CCCCCC;
     padding: 2rem 1rem;
     text-align: center;
@@ -360,12 +360,13 @@ footer {
 }
 
 .footer-contact a {
-    color: #556B2F;
+    color: #CCCCCC;
     text-decoration: none;
     font-weight: 500;
 }
 
 .footer-contact a:hover {
+    color: #FFFFFF;
     text-decoration: underline;
 }
 
