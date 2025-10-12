@@ -363,8 +363,12 @@ p {
 }
 
 /*Mobile list alternative*/
-.specs-list {
+.specs-table {
     display: none;
+}
+
+.specs-list {
+    display: block;
 }
 
 .mobile-only {
@@ -1009,6 +1013,14 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .specs-table {
+        display: table;
+    }
+    
+    .specs-list {
+        display: none;
     }
 
     /*About section columns*/
