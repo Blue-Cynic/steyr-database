@@ -54,7 +54,6 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    flex-direction: row;
 }
 
 .logo h1 {
@@ -76,12 +75,11 @@ header {
 .logo img {
     height: 60px;
     width: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .logo img:hover {
     transform: scale(1.05);
-    filter: brightness(1.1);
 }
 
 /*Navigation Styles*/
@@ -755,6 +753,10 @@ footer {
         height: 70px;
     }
 
+    .logo h1 {
+        font-size: 1.5rem; 
+    }
+
     /*Hide hamburger menu*/
     .mobile-menu {
         display: none;
@@ -926,6 +928,10 @@ footer {
         height: 80px;
     }
 
+    .logo h1 {
+        font-size: 1.75rem;
+    }
+
     /*Navigation hover effects*/
     .nav-links {
         gap: 0.75rem;
@@ -1053,6 +1059,14 @@ footer {
 
     .logo img {
         height: 90px;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
     }
 
     .nav-links {
