@@ -699,6 +699,199 @@ input[type="checkbox"] {
     font-size: 0.9rem;
 }
 
+/*History header*/
+.history-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, rgba(85, 107, 47, 0.4), rgba(63, 79, 36, 0.4));
+    border-radius: 8px;
+    border-bottom: 4px solid #556B2F;
+}
+
+.history-subtitle {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+/*History intro*/
+.history-intro {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: rgba(85, 107, 47, 0.15);
+    border-radius: 8px;
+    border-left: 5px solid #556B2F;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/*Era sections*/
+.history-era {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: rgba(63, 79, 36, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.era-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #556B2F;
+}
+
+.era-header h3 {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.era-years {
+    color: #CCCCCC;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.era-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.era-text h4 {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.era-text h4:first-child {
+    margin-top: 0;
+}
+
+.era-text p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+.era-milestones {
+    background-color: rgba(85, 107, 47, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #556B2F;
+}
+
+.era-milestones h4 {
+    color: #FFFFFF;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+}
+
+.era-milestones ul {
+    list-style: none;
+    padding: 0;
+}
+
+.era-milestones li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(85, 107, 47, 0.3);
+    line-height: 1.6;
+}
+
+.era-milestones li:last-child {
+    border-bottom: none;
+}
+
+.era-milestones strong {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/*Innovation section*/
+.innovation-section {
+    margin: 3rem 0;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, rgba(85, 107, 47, 0.15), rgba(63, 79, 36, 0.15));
+    border-radius: 8px;
+}
+
+.innovation-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.innovation-item {
+    background-color: rgba(63, 79, 36, 0.3);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #556B2F;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.innovation-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.innovation-item h4 {
+    color: #FFFFFF;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+}
+
+/*Legacy section*/
+.legacy-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: rgba(85, 107, 47, 0.2);
+    border-radius: 8px;
+    border-left: 5px solid #556B2F;
+}
+
+.legacy-section article p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/*Present day section*/
+.present-day {
+    margin: 3rem 0;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, rgba(85, 107, 47, 0.3), rgba(63, 79, 36, 0.3));
+    border-radius: 8px;
+}
+
+.present-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.present-item {
+    background-color: rgba(44, 44, 44, 0.6);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 3px solid #556B2F;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.present-item h4 {
+    color: #FFFFFF;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+}
+
 /*Footer Styles*/
 footer {
     background-color: #556B2F;
@@ -919,6 +1112,37 @@ footer {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /*History webpage styles*/
+    .history-header {
+        padding: 3rem 2rem;
+    }
+    
+    .history-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .era-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    
+    .era-header h3 {
+        font-size: 1.75rem;
+    }
+    
+    .era-years {
+        font-size: 1.2rem;
+    }
+    
+    .innovation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .present-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /*Desktop Styles (min-width: 1024px)*/
@@ -1052,6 +1276,36 @@ footer {
         column-count: 2;
         column-gap: 2rem;
     }
+
+    /*History webpage styles*/
+    .history-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .history-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .era-content {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .era-header h3 {
+        font-size: 2rem;
+    }
+    
+    .era-text h4 {
+        font-size: 1.4rem;
+    }
+    
+    .innovation-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .legacy-section article {
+        column-count: 2;
+        column-gap: 2rem;
+    }
 }
 
 /*Large Desktop Styles (min-width: 1440px)*/
@@ -1087,6 +1341,10 @@ footer {
 
     .nav-links > li > a {
         padding: 1rem 1.5rem;
+    }
+
+    .era-content {
+        grid-template-columns: 3fr 1fr;
     }
 }
 
