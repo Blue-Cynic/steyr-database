@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-html, body, header, nav, main, footer, section, article, figure, figcaption, h1, h2, h3, h4, p, ul, li, a, img, table, tr, td, th, form, label, button {
+html, body, header, nav, main, footer, section, article, figure, figcaption, h1, h2, h3, h4, p, ul, li, a, img, table, tr, td, th, form, label, button, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -940,6 +940,78 @@ footer {
     text-decoration: underline;
 }
 
+/*Animations*/
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-in animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Apply animations */
+.weapon-card {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.weapon-card:nth-child(2) {
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+
+.weapon-card:nth-child(3) {
+    animation-delay: 0.4s;
+    animation-fill-mode: backwards;
+}
+
+.weapon-card:nth-child(4) {
+    animation-delay: 0.6s;
+    animation-fill-mode: backwards;
+}
+
+.welcome {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.btn-learn-more:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/*Video*/
+.welcome-video {
+    margin-top: 1.5rem;
+}
+
+.welcome-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
 /*Tablet Styles (min-width: 768px)*/
 @media screen and (min-width: 768px) {
     .header-content {
@@ -1080,6 +1152,16 @@ footer {
     
     .contact-methods {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-method a {
+        color: #CCCCCC;
+        text-decoration: none;
+    }
+
+    .contact-method a:hover {
+        color: #FFFFFF;
+        text-decoration: underline;
     }
     
     .radio-group {
