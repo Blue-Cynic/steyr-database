@@ -271,12 +271,20 @@ p {
 
 .weapon-card figure {
     position: relative;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C2C2C;
 }
 
 .weapon-card img {
     width: 100%;
     height: auto;
     display: block;
+    max-height: 400px;
+    object-fit: contain;
 }
 
 .weapon-card figcaption {
@@ -285,6 +293,10 @@ p {
     padding: 0.5rem;
     font-size: 0.875rem;
     text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .weapon-info {
@@ -596,6 +608,8 @@ input[type="checkbox"] {
 .weapon-main-image img {
     width: 100%;
     height: auto;
+    max-height: 600px;
+    object-fit: contain;
 }
 
 .weapon-main-image figcaption {
@@ -679,6 +693,12 @@ input[type="checkbox"] {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C2C2C;
 }
 
 .gallery-grid figure:hover {
@@ -689,6 +709,8 @@ input[type="checkbox"] {
     width: 100%;
     height: auto;
     display: block;
+    max-height: 300px;
+    object-fit: contain;
 }
 
 .gallery-grid figcaption {
@@ -1130,6 +1152,11 @@ footer {
         font-size: 2rem;
     }
 
+    /*Weapon images*/
+    .weapon-card figure {
+        min-height: 280px;
+    }
+
     /*Featured weapons grid*/
     .featured {
         display: grid;
@@ -1313,8 +1340,11 @@ footer {
     }
 
     .weapon-card figure {
-        flex: 1;
-        min-width: 40%;
+        min-height: 300px;
+    }
+
+    .weapon-card img {
+        max-height: 450px;
     }
 
     .weapon-info {
