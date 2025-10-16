@@ -1001,11 +1001,14 @@ footer {
 }
 
 /*Video*/
-.welcome-video {
+.promo-video {
     margin-top: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.welcome-video video {
+.promo-video video {
     width: 100%;
     height: auto;
     border-radius: 8px;
